@@ -154,7 +154,7 @@ public class GuiController implements Initializable {
                 Duration.millis(400),
                 ae -> moveDown(new MoveEvent(EventType.DOWN, EventSource.THREAD))
         ));
-        timeLine.setCycleCount(Timeline.INDEFINITE);
+        timeLine.setCycleCount(Timeline.INDEFINITE); //cambio algo
         timeLine.play();
     }
 
