@@ -147,9 +147,10 @@ public class GuiController implements Initializable {
         brickPanel.setLayoutY(-42 + gamePanel.getLayoutY() + brick.getyPosition() * brickPanel.getHgap() + brick.getyPosition() * BRICK_SIZE);
 
         generatePreviewPanel(brick.getNextBrickData());
-
-
-        timeLine = new Timeline(new KeyFrame(
+        
+        
+        
+        timeLine = new Timeline(new KeyFrame(   //duracion en la que caen los bloques
                 Duration.millis(400),
                 ae -> moveDown(new MoveEvent(EventType.DOWN, EventSource.THREAD))
         ));
@@ -157,7 +158,7 @@ public class GuiController implements Initializable {
         timeLine.play();
     }
 
-    private Paint getFillColor(int i) {
+    private Paint getFillColor(int i) { //cambio de color de los bloques
         Paint returnPaint;
         switch (i) {
             case 0:
